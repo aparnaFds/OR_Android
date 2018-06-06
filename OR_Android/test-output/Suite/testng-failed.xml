@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="resources.Listeners"/>
+    <listener class-name="resources.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="5" name="Validating Join Ocean functionality(failed)">
+    <classes>
+      <class name="android_Testcases.JoinOcean">
+        <methods>
+          <include name="verifyEnvSelection"/>
+          <include name="invoke"/>
+          <include name="invokeDriver"/>
+        </methods>
+      </class> <!-- android_Testcases.JoinOcean -->
+    </classes>
+  </test> <!-- Validating Join Ocean functionality(failed) -->
+</suite> <!-- Failed suite [Suite] -->

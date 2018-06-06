@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="android_Testcases.Login">
+        <methods>
+          <include name="verifygetLogOnBTN"/>
+          <include name="verifyRememberMeField"/>
+          <include name="verifyPasswordField"/>
+          <include name="verifyLogin"/>
+          <include name="verifyUsernameField"/>
+          <include name="verifyWelcomeToOCEAN"/>
+          <include name="verifyJoinOceanLink"/>
+        </methods>
+      </class> <!-- android_Testcases.Login -->
+      <class name="android_Testcases.EnvironmentSelection">
+        <methods>
+          <include name="verifyEnvSelection"/>
+          <include name="invoke"/>
+        </methods>
+      </class> <!-- android_Testcases.EnvironmentSelection -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
