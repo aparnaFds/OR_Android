@@ -3,7 +3,6 @@ package resources;
 import java.io.File;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -69,11 +68,5 @@ public class ExtentReporterNG implements IReporter {
                 extent.endTest(test);
             }
         }
-    }
- 
-    private Date getTime(long millis) {
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTimeInMillis(millis);
-        return calendar.getTime();        
     }
 }

@@ -22,7 +22,7 @@ public class Base {
 
 public static AppiumDriverLocalService service;
 	
-	public static void setserverPath(){
+	/*public static void setserverPath(){
 		service = AppiumDriverLocalService.buildService(new AppiumServiceBuilder().usingDriverExecutable(new File("/usr/local/bin/node"))
 				.withAppiumJS(new File("/Applications/Appium.app/Contents/Resources/app/node_modules/appium/build/lib/main.js"))
 				.withIPAddress("127.0.0.1").usingPort(4723));
@@ -34,22 +34,16 @@ public static AppiumDriverLocalService service;
 		Thread.sleep(2000L);
 		System.out.println("Starting Server status ="+service.isRunning());
 	}
-	
-	
-	
+	*/
 
 	public static AndroidDriver<AndroidElement> initializeDriver() throws MalformedURLException {
-
-			File f = new File("/Users/aparna.suresh.phondu/Documents/Aparna/OceanReady_Workspace/OceanReady_Android/src/main/java/resources/OR_31052018_2.apk");
-			
+			File f = new File("/Users/aparna.suresh.phondu/Documents/Aparna/GitRepo/OR_Android/src/main/java/resources/OR_31052018_2.apk");
 			DesiredCapabilities cap = new DesiredCapabilities();
 			cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "ANDROID");
 			cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Samsung");
 			cap.setCapability("noReset","true");
-
 			cap.setCapability(MobileCapabilityType.APP, f.getAbsolutePath());
-			driver = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"), cap);
-			
+			driver = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"), cap);		
 			return driver;		
 	}
 	
